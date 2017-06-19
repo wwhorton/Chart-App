@@ -1,0 +1,22 @@
+{
+  "name": "chartapp",
+  "version": "0.0.0",
+  "dependencies": {
+    "almond": "~0.3.1",
+    "backbone": "~1.1.0",
+    "bootstrap-sass-official": "~3.3.1",
+    "Chart.js": "~1.0.2",
+    "html2canvas": "^0.4.1",
+    "jquery": "~2.1.0",
+    "lodash": "~2.4.1",
+    "modernizr": "~2.7.1",
+    "requirejs": "~2.1.10",
+    "requirejs-text": "~2.0.10"
+  },
+  "devDependencies": {
+    "almond": "~0.3.1",
+    "chai": "~3.2.0",
+    "Chart.StackedBar.js": "https://github.com/Regaddi/Chart.StackedBar.js.git#~1.0.3",
+    "mocha": "~2.2.5"
+  }
+}

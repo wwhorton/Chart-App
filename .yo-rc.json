@@ -1,0 +1,12 @@
+{
+  "generator-backbone": {
+    "appPath": "app",
+    "appName": "ChartApp",
+    "coffee": false,
+    "testFramework": "mocha",
+    "templateFramework": "lodash",
+    "sassBootstrap": true,
+    "includeRequireJS": true
+  },
+  "generator-mocha": {}
+}

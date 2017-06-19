@@ -1,0 +1,57 @@
+<div id="chartjs-tooltip"></div>
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title text-left"><%= title %></h2>
+            <button type="button" data-keyboard="true" class="close" data-dismiss="modal" id="modal-close"
+                    aria-label="Close"><span
+                    aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body" id="chart-modal-body">
+            <div class="container-fluid">
+                <div class="col-xs-12">
+                    <div class="row chart-area">
+                        <h4 class="text-center"><%= subtitle %></h4>
+                        <% if( type.indexOf('pie') > -1 || type.indexOf('doughnut') > -1 || type.indexOf('polar') > -1 ) { %>
+                        <div class="col-xs-8 <% if ( showLegend == 'No' ) { %> col-xs-push-2<% } %>">
+                            <canvas id="<%= 'canvas-' + id + '-modal' %>"
+                                    height="<%= window.innerHeight * .6 %>"></canvas>
+                        </div>
+                        <% if( showLegend == 'Yes' ){ %>
+                        <div id="<%= 'legend-modal-' + id %>" class="col-sm-4" style="margin-top: 15%;"></div>
+                        <% } %>
+                        <% } else { %>
+                        <div class="col-xs-12">
+                            <div id="canvas-wrapper">
+                                <canvas id="<%= 'canvas-' + id + '-modal' %>"
+                                        height="<%= window.innerHeight * .6 %>"></canvas>
+                            </div>
+                            <div id="<%= 'legend-modal-' + id %>" class="center-block legend-modal"></div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="row">
+                <div class="col-xs-12 chart-button-block">
+                    <h5 class="text-center hidden-xs"><%= title %></h5>
+
+                    <div class="text-center">
+                        <button class="btn btn-default btn-sm jpg-download"><span class="fa fa-download"></span> JPG
+                        </button>
+                        <button class="btn btn-default btn-sm xls-download" <%- spreadsheet ? 'null' : 'disabled' %> >
+                            <span class="fa fa-download"></span> Data (xls)
+                        </button>
+                        <button class="btn btn-default btn-sm doc-download" <%- methods ? 'null' : 'disabled' %> ><span
+                                class="fa fa-download"></span>
+                            Analysis &amp; Methods
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal-content -->
+</div><!-- /.modal-dialog -->

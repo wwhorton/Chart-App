@@ -1,0 +1,23 @@
+<% if ( type.indexOf('pie') > -1 || type.indexOf('doughnut') > -1 || type.indexOf('polar') > -1 ) { %>
+<ul class="<%= name.toLowerCase() %>-legend list-unstyled list-inline center-block text-center"
+    style="display: flex; justify-content: center; flex-direction: column;">
+    <% for (var i = 0; i < segments.length; i++){ %>
+    <li class="text-left legend"><span
+            style="background-color:<%= segments[i].fillColor %>">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <% if( typeof segments[i].label !== 'undefined' ){ %>
+        <%= segments[i].label %>
+        <% } %>
+    </li>
+    <% } %>
+</ul>
+<% } else { %>
+<ul class="<%= name.toLowerCase() %>-legend list-unstyled list-inline center-block text-center">
+    <% for (var i = 0; i < datasets.length; i++){ %>
+    <li class="legend"><span style="background-color:<%= datasets[i].strokeColor %>">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <% if( typeof datasets[i].label !== 'undefined' ){ %>
+        <%= datasets[i].label %>
+        <% } %>
+    </li>
+    <% } %>
+</ul>
+<% } %>

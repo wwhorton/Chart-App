@@ -1,0 +1,57 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+
+canvas {
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+
+.chart {
+    margin: 15px;
+}
+
+.chart-area {
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+.chart-button-block {
+    background-color: #0A5170;
+    color: #fff;
+    padding: 0px 15px 15px 15px;
+    .btn {
+        background-color: #0A5170 !important;
+        border: solid 1px #8DC358 !important;
+        color: #fff;
+        :hover {
+            border: none !important;
+            background-color: #011F2C !important;
+        }
+    }
+}
+
+.value-tooltip {
+    background-color: #ffffff;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    padding: 5px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+
+}
+
+.legend-modal {
+    font-size: 1.7rem;
+}
+
+.legend-slide {
+    font-size: 1rem;
+}
+
+.modal, .modal-lg {
+    width: 100% !important;
+    height: 100% !important;
+    margin-top: 0px !important;
+}

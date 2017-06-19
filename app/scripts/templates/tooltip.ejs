@@ -1,0 +1,6 @@
+<% if (typeof label !== 'undefined' && typeof value !== 'undefined' && type !== 'pie chart (percentage)') { %>
+<p><%= label %>: <%= numberWithCommas(value) %></p>
+<% } %>
+<% if ( type === 'pie chart (percentage)') { %>
+<p><%= label %>: <%= numberWithCommas(value) + "%" %></p>
+<% } %>
